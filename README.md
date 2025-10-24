@@ -1,17 +1,27 @@
 ![Логотип](https://github.com/AndrewBioChem/NEUROML_FCD/blob/main/Adobe%20Express%20-%20file.png)
 
 # Detection of brain area with Focal Cortical Dysplasia
-This repository consists of main jupyter notebook with data exploration and basic classifiers usage
+This repository consists of main Jupyter notebook with data exploration and basic classifiers usage
 
 ## Problem
-Focal cortical dysplasia (FCD) is one of the most common causes of drug-resistant epilepsy. However, its diagnosis remains extremely difficult, especially in mild cases. Traditional visual assessment methods such as T1w, T2w, and FLAIR strongly depend on the radiologist's expertise and often fail to detect subtle microstructural changes with the naked eye.
+Focal cortical dysplasia (FCD) is one of the most common causes of drug-resistant epilepsy. However, its diagnosis remains extremely difficult, especially in mild cases. Traditional visual assessment methods, such as T1w, T2w, and FLAIR, strongly depend on the radiologist's expertise and often fail to detect subtle microstructural changes with the naked eye.
+
 ## Task
 Detect FCD regions on MRI-derived radiomics data using ML classifiers. The objective was to develop a model with **zero false negatives per patient** (no missed patients) during cross-validation (CV), and to **minimize false positives (FP)**.
+
 ## Goal
-Build a patient-wise machine-learning pipeline to reduces the area of manual data inspection by a radiologist.
+Build a patient-wise machine-learning pipeline to reduce the area of manual data inspection by a radiologist.
+
+## Initial dataset information
+- Total samples: 11088
+- Healthy samples: 10660
+- FCD samples: 428
+- Unique subjects: 168
+- Unique brain areas: 66
+- Total radiomics features: 280
 
 ## Data exploration
-The dataset contained region-wise radiomics features derived from several MRI modalities (T1, T2, FLAIR). Each region was labeled as either FCD-positive or control. MRI-derived radiomics dataset included 279 features extracted from T1-weighted, T2-weighted and FLAIR images across 168 subjects. The dataset contained both healthy and FCD-affected 66 brain regions per subject. Each patient had several labeled regions.
+The dataset contained region-wise radiomics features derived from several MRI modalities (T1, T2, FLAIR). Each region was labeled as either FCD-positive or control. The MRI-derived radiomics dataset included 279 features extracted from T1-weighted, T2-weighted, and FLAIR images across 168 subjects. The dataset contained both healthy and FCD-affected 66 brain regions per subject. Each patient had several labeled regions.
 
 *Statistics*
 The composition of the dataset, feature distributions, and class balance were explored. Statistically significant radiomic differences between FCD and control tissue were identified through statistical testing (Mann-Whitney U with FDR correction). The effect size approximated group differences in size and direction. Top features were ranked by adjusted p-values and effect sizes.
