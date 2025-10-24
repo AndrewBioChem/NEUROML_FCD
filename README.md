@@ -57,4 +57,7 @@ Across six models, patient-wise cross-validation and test evaluation showed that
 Overall, Logistic Regression, SVM, and Random Forest demonstrated the best combination of sensitivity, patient-level recall, region-level recall, and overall discriminative performance.   
 ## Data linc
 https://drive.google.com/drive/folders/19kHp7AM049c6bFy_lG6S-exeCVNuFwIe?usp=drive_link
-### Gratitude to Nadezhda Alsahanova
+## Performers 
+*Kashuk Ekaterina*\
+*Butylin Andrey*
+### Gratitude to Nadezhda Alsahanova !
