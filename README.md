@@ -15,3 +15,6 @@ The dataset contained region-wise radiomics features derived from several MRI mo
 
 *Statistics*
 The composition of the dataset, feature distributions, and class balance were explored. Statistically significant radiomic differences between FCD and control tissue were identified through statistical testing (Mann-Whitney U with FDR correction). The effect size approximated group differences in size and direction. Top features were ranked by adjusted p-values and effect sizes.
+
+FLAIR 
+![image](https://github.com/AndrewBioChem/NEUROML_FCD/blob/main/2025-10-24_14-38-12.png)
