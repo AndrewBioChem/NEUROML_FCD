@@ -31,5 +31,14 @@ The composition of the dataset, feature distributions, and class balance were ex
 This difference reflects the increased variability in the size of local clusters, which means heterogeneity of cortical organization (*original_gldm_DependenceVariance*), as well as a decrease in uniformity depending on the neighborhood, which is consistent with the general heterogeneity of tissue in FCD (*original_gldm_DependenceNonUniformityNormalized*)
 
 **T1w and T2w modalities**
-![image]()
+![image](https://github.com/AndrewBioChem/NEUROML_FCD/blob/main/2025-10-24_15-01-06.png)
 A larger average for *original_gldm_LargeDependenceHighGrayLevelEmphasis_T1* indicates large homogeneous spots of high intensity on T1, which is a practical case for FCD. A drop *original_glrlm_ShortRunEmphasis_T2* indicates a characteristic tissue disorganization and loss of normal layering, which often occurs with FCD at the border of gray and white matter.
+
+## Model pipeline 
+1) Applied a **StandardScaler** to 279 features to make radiomics measures comparable (volume fearure droped)
+2) **Held out 30% of subjects** as a final test set (no overlap with training set) to evaluate generalization\
+   Train subjects: 117 | Test subjects: 51\
+   Train samples: 7722 | Test samples: 3366
+3) Model selection with a **GroupKFold (n_splits=5)** so that every fold contained **only whole patients** and no region from the same subject appeared in both training and validation sets. 
+4) Dataset is highly imbalanced , **RandomUnderSampler** was used on the training portion of each fold to rebalance classes for model fitting.
+5) 
