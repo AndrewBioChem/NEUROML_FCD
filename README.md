@@ -51,5 +51,6 @@ A larger average for *original_gldm_LargeDependenceHighGrayLevelEmphasis_T1* ind
 6) Optimized a decision threshold per fold using the rule **False Negative patients == 0** and selection the one that minimize fold **False Positives**.
 
 ## Results
-
-   
+![image]()
+Across six models, patient-wise cross-validation and test evaluation showed that all models achieved perfect average patient-level recall on training folds, confirming sensitivity to FCD-positive subjects. Logistic Regression and linear SVM provided high region-level recall (~0.90) and strong patient-level recall on test (0.941 and 0.922) with moderate test specificity (0.380–0.364) and AUC ~0.72–0.73. KNN and Gradient Boosting were less region-sensitive (recall ~0.75–0.85) but maintained patient recall (0.922 and 0.863) with slightly higher test specificity (~0.418–0.404). Ensemble tree models such as Random Forest and XGBoost showed balanced region recall (~0.87 and 0.866), patient recall (0.922), and test specificity (~0.379–0.315), with AUCs of 0.72 and 0.701. 
+Overall, Logistic Regression, SVM, and Random Forest demonstrated the best combination of sensitivity, patient-level recall, region-level recall, and overall discriminative performance.   
