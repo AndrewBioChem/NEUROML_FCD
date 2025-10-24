@@ -1,4 +1,4 @@
-![Логотип](Adobe Express - file.png)
+![Логотип](https://github.com/AndrewBioChem/NEUROML_FCD/blob/main/Adobe%20Express%20-%20file.png)
 
 # Detection of brain area with Focal Cortical Dysplasia
 This repository consists of main jupyter notebook with data exploration and basic classifiers usage
