@@ -40,5 +40,16 @@ A larger average for *original_gldm_LargeDependenceHighGrayLevelEmphasis_T1* ind
    Train subjects: 117 | Test subjects: 51\
    Train samples: 7722 | Test samples: 3366
 3) Model selection with a **GroupKFold (n_splits=5)** so that every fold contained **only whole patients** and no region from the same subject appeared in both training and validation sets. 
-4) Dataset is highly imbalanced , **RandomUnderSampler** was used on the training portion of each fold to rebalance classes for model fitting.
-5) 
+4) Dataset is highly imbalanced, **RandomUnderSampler** was used on the training portion of each fold to rebalance classes for model fitting.
+5) GridSearch for list of classifiers:
+   - *Logistic Regression*: C, penalty
+   - *SVM*: C ,kernel,  gamma
+   - *KNN*: n_neighbors, p, weights
+   - *Gradient Boosting*: loss, learning_rate, n_estimators, subsample, criterion
+   - *Random Forest*: n_estimators , criterion , max_depth, max_features, class_weight
+   - *XGBoost*: n_estimators , max_depth, learning_rate
+6) Optimized a decision threshold per fold using the rule **False Negative patients == 0** and selection the one that minimize fold **False Positives**.
+
+## Results
+
+   
