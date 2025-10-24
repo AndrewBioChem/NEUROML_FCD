@@ -1,3 +1,5 @@
+![Логотип](Adobe Express - file.png)
+
 # Detection of brain area with Focal Cortical Dysplasia
 This repository consists of main jupyter notebook with data exploration and basic classifiers usage
 
