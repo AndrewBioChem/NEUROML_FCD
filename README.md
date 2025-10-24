@@ -11,10 +11,15 @@ Detect FCD regions on MRI-derived radiomics data using ML classifiers. The objec
 Build a patient-wise machine-learning pipeline to reduces the area of manual data inspection by a radiologist.
 
 ## Data exploration
-The dataset contained region-wise radiomics features derived from several MRI modalities (T1, T2, FLAIR). Each region was labeled as either FCD-positive or control. MRI-derived radiomics dataset included 280 features extracted from T1-weighted, T2-weighted and FLAIR images across 168 subjects. The dataset contained both healthy and FCD-affected brain regions segmented into 66 cortical areas per subject. Each patient had several labeled regions.
+The dataset contained region-wise radiomics features derived from several MRI modalities (T1, T2, FLAIR). Each region was labeled as either FCD-positive or control. MRI-derived radiomics dataset included 279 features extracted from T1-weighted, T2-weighted and FLAIR images across 168 subjects. The dataset contained both healthy and FCD-affected 66 brain regions per subject. Each patient had several labeled regions.
 
 *Statistics*
 The composition of the dataset, feature distributions, and class balance were explored. Statistically significant radiomic differences between FCD and control tissue were identified through statistical testing (Mann-Whitney U with FDR correction). The effect size approximated group differences in size and direction. Top features were ranked by adjusted p-values and effect sizes.
 
-FLAIR 
+**FLAIR** 
 ![image](https://github.com/AndrewBioChem/NEUROML_FCD/blob/main/2025-10-24_14-38-12.png)
+This difference reflects the increased variability in the size of local clusters, which means heterogeneity of cortical organization (*original_gldm_DependenceVariance*), as well as a decrease in uniformity depending on the neighborhood, which is consistent with the general heterogeneity of tissue in FCD (*original_gldm_DependenceNonUniformityNormalized*)
+
+**T1w and T2w modalities**
+![image]()
+A larger average for *original_gldm_LargeDependenceHighGrayLevelEmphasis_T1* indicates large homogeneous spots of high intensity on T1, which is a practical case for FCD. A drop *original_glrlm_ShortRunEmphasis_T2* indicates a characteristic tissue disorganization and loss of normal layering, which often occurs with FCD at the border of gray and white matter.
